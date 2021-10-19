@@ -1,0 +1,187 @@
+:root {
+    --primPaleBlue:rgb(224, 232, 255);
+    --primBrightBlue:rgb(56, 41, 224);
+    --neutralPaleBlue:rgb(245, 247, 255);
+    --neutralDesBlue: rgb(114, 128, 167);
+    --neutralDarkBlue: rgb(31, 47, 86);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--primPaleBlue);
+    width: 100%;
+}
+.body {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+}
+h3 {
+    font-size: 22px;
+    font-weight: 900;
+}
+p {
+    line-height: 32px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 40%;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, .2) ;
+}
+.top {
+    background-image: url(images/illustration-hero.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+.text {
+    padding: 35px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 70vh;
+    border-radius: 0 0 25px 25px;
+}
+.text p {
+    font-size: 22px;
+    color: var(--neutralDesBlue);
+    text-align: center;
+}
+.bg-music {
+    display: flex;
+    background: var(--neutralPaleBlue);
+    width: 100%;
+    border-radius: 15px;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+.left img {
+    height: 48px;
+    width: 48px;
+    margin-right: 25px;
+}
+.right p {
+    color: var(--primBrightBlue);
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+}
+.right p:hover {
+    color: rgb(117, 106, 241);
+}
+button {
+    border: none;
+    background: var(--primBrightBlue);
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    color: var(--neutralPaleBlue);
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, .2) ;
+}
+button:hover {
+    background: rgb(117, 106, 241);
+}
+.bottom {
+    font-weight: 900;
+    cursor: pointer;
+}
+.bottom:hover {
+    color: black;
+}
+/*******************
+responsive for ipad
+*******************/
+@media (max-width:1200px) {
+    .card {
+        width: 90%;
+    }
+}
+/*******************
+responsive for mob
+*******************/
+@media (max-width:767px) {
+    .top {
+        height: 20vh;
+    }
+    .text {
+        padding: 35px 25px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    .bg-music {
+        padding: 20px;
+    }
+    .left img {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+    }
+    button {
+        font-size: 16px;
+        letter-spacing: 0px;
+    }
+}
+@media (max-width:300px) {
+    h1 {
+        font-size: 22px;
+    }
+    .bg-music {
+        flex-direction: column;
+    }
+}
+@media (max-height:500px) {
+    .card {
+        width: 50%;
+    }
+    .text {
+        padding: 10px 25px;
+    }
+    .bg-music {
+        margin: 5px 0;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        line-height: 18px;
+    }
+}
